@@ -1,0 +1,17 @@
+.navbar {
+    padding-left: 120px;
+    background-color: lightgray;
+    color: black;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  .util {
+    background-color: white;
+    color: white;
+    padding: 10px;
+  }
+  .card {
+    padding-left: 120px;
+}

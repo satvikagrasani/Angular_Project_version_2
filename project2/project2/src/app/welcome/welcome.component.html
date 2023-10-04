@@ -1,0 +1,44 @@
+<mat-card class="card" style=" padding-left: 40%; ">
+  <br>
+  <h1 mat-subheader>Welcome {{ employeeData.first_name }}
+    <button type="button" class="btn btn-danger position-absolute  end-0  me-5" 
+      (click)="logout()">Logout</button>
+  </h1>
+  <mat-divider></mat-divider>
+</mat-card>
+
+
+<div class="container" style="padding-top: 60px; width: 30%;">
+    <table class="table table-bordered custom-table">
+      <tbody>
+        <tr>
+          <td class="table-header">ID</td>
+          <td class="table-data">{{ employeeData.id }}</td>
+        </tr>
+        <tr>
+          <td class="table-header">First Name</td>
+          <td class="table-data">{{ employeeData.first_name }}</td>
+        </tr>
+        <tr>
+          <td class="table-header">Last Name</td>
+          <td class="table-data">{{ employeeData.last_name }}</td>
+        </tr>
+        <tr>
+          <td class="table-header">Address</td>
+          <td class="table-data">{{ employeeData.address }}</td>
+        </tr>
+        <tr>
+          <td class="table-header">Contact No</td>
+          <td class="table-data">{{ employeeData.phone_number }}</td>
+        </tr>
+        <tr>
+          <td class="table-header">DOB</td>
+          <td class="table-data">{{ employeeData.date_of_birth }}</td>
+        </tr>
+        <tr>
+          <td class="table-header">Email</td>
+          <td class="table-data">{{ employeeData.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

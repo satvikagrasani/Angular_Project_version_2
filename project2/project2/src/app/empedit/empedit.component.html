@@ -1,0 +1,53 @@
+<mat-card class="card" style=" padding-left: 40%; ">
+  <h1 mat-subheader>Update Employee Form</h1>
+  <mat-divider></mat-divider>
+</mat-card>
+
+<mat-grid-list cols="1" rowHeight="4:1">  
+  <mat-grid-tile>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div fxLayout="row" fxLayout.xs="column">
+        <div fxLayout="row" fxLayout.xs="column">
+          <h1></h1>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column">
+          <mat-form-field fxFlex="50" appearance="fill">
+            <input matInput placeholder="First Name" formControlName="first_name" required>
+            <mat-error *ngIf="employeeForm.get('first_name').hasError('required')">First Name is required</mat-error>
+          </mat-form-field>
+          <mat-form-field fxFlex="50" appearance="fill">
+            <input matInput placeholder="Last Name" formControlName="last_name" required>
+            <mat-error *ngIf="employeeForm.get('last_name').hasError('required')">Last Name is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column">
+          <mat-form-field fxFlex="50" appearance="fill">
+            <input matInput placeholder="Contact No" formControlName="phone_number" required>
+            <mat-error *ngIf="employeeForm.get('phone_number').hasError('required')">Contact No is required</mat-error>
+          </mat-form-field>
+          <mat-form-field fxFlex="50" appearance="fill">
+            <input matInput placeholder="Email" formControlName="email" required>
+            <mat-error *ngIf="employeeForm.get('email').hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="employeeForm.get('email').hasError('email')">Enter a valid email</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column">
+        <mat-form-field fxFlex="50" appearance="fill">
+          <input matInput type="date" placeholder="Date of Birth" formControlName="date_of_birth" required>
+              <mat-error *ngIf="employeeForm.get('date_of_birth').hasError('required')">Date of Birth is
+                required</mat-error>
+            </mat-form-field>
+            <mat-form-field fxFlex="50" appearance="fill">
+              <input matInput placeholder="Address" formControlName="address" required>
+              <mat-error *ngIf="employeeForm.get('address').hasError('required')">Address is required</mat-error>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column">
+            <button mat-raised-button color="accent" type="submit" style="width: 100%;"
+              [disabled]="!employeeForm.valid">Update Employee</button>
+          </div>
+        </div>
+      </form>
+    </mat-grid-tile>
+  </mat-grid-list>
+  

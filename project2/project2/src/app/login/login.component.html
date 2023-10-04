@@ -1,0 +1,29 @@
+<mat-card class="card" style=" padding-left: 40%; ">
+    <h1 mat-subheader>Update Employee Form</h1>
+    <mat-divider></mat-divider>
+  </mat-card>
+
+<mat-grid-list cols="1" rowHeight="4:1">  
+    <mat-grid-tile>
+        <form [formGroup]="employeeForm">
+            
+              <div fxLayout="row" fxLayout.xs="column"><h1></h1></div>
+              <div fxLayout="row" fxLayout.xs="column">
+                <mat-form-field fxFlex="100" class="mb-3">
+                  <mat-label>Employee Username</mat-label>
+                  <input matInput formControlName="first_name"  required>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayout.xs="column">
+                <mat-form-field fxFlex="50" class="mb-3" >
+                  <mat-label>Password (DOB)</mat-label>
+                  <input matInput type="password" formControlName="date_of_birth">
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayout.xs="column">
+                <button mat-raised-button color="accent" type="button" (click)="onSubmit()" style="width: 100%;">Login</button>
+            </div>
+        </form>
+    </mat-grid-tile>
+</mat-grid-list>
+  

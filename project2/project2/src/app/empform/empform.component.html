@@ -1,0 +1,40 @@
+<mat-card class="card">
+    <h1 mat-subheader>Employee Form</h1>
+    <mat-divider></mat-divider>
+</mat-card>
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center flex-end" >
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column">
+            <div fxLayout="row" fxLayout.xs="column"><h1></h1></div>
+            <div fxLayout="row" fxLayout.xs="column">
+                <mat-form-field>
+                <input matInput placeholder="First Name" formControlName="first_name" required>
+                </mat-form-field>
+                <mat-form-field>
+                <input matInput placeholder="Last Name" formControlName="last_name" required>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayout.xs="column">
+                <mat-form-field>
+                <input matInput placeholder="Contact No" formControlName="phone_number" required>
+                </mat-form-field>
+                <mat-form-field>
+                <input matInput placeholder="Email" formControlName="email" required>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayout.xs="column">
+                <mat-form-field style="width: 212px; height: 79px;">                
+                    <input matInput type="date" placeholder="Date of Birth" formControlName="date_of_birth" required>
+                </mat-form-field>
+                
+                <mat-form-field>
+                    <input matInput placeholder="Address" formControlName="address" required>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayout.xs="column">
+                <button mat-raised-button color="accent" type="submit" style="width: 100%;">Add Employee</button>
+            </div>
+        </div>
+    </form>
+</div>  

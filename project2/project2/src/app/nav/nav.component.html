@@ -1,0 +1,34 @@
+<mat-toolbar class="navbar">
+    <button mat-button [routerLink]="['']">Home</button>
+    <button mat-button [routerLink]="['list']">List</button>
+
+    <span class="spacer"></span>
+    <span class="spacer"></span>
+    <span class="spacer"></span>
+    <span class="spacer"></span>
+
+    <button mat-button [routerLink]="['login']">Login</button>
+</mat-toolbar>
+
+<mat-toolbar class="util">
+    <span class="spacer"></span>
+    <mat-list>
+      <mat-list-item>
+        <span>
+          Current Timezone:
+          <span style="color: lightseagreen"> IST</span>
+        </span>
+        <br>
+        <span>
+          Currency:
+          <span style="color: lightseagreen;"> INR</span>
+        </span>
+      </mat-list-item>
+    </mat-list>
+  </mat-toolbar>
+
+  <mat-card class="card">
+    <h1 mat-subheader >Employee Management</h1>
+    <mat-divider></mat-divider>
+  </mat-card>
+  <span class="spacer"></span>
